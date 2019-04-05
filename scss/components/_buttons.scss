@@ -1,0 +1,28 @@
+// components/buttons.scss
+
+.btn--default {
+    @include btn--design;
+    background-color: $default-btn-clr;
+}
+
+.btn--success {
+    @include btn--design;
+    background-color: $success-btn-clr; //greenish
+}
+
+.btn--error {
+    @include btn--design;
+    background-color: $error-btn-clr; //redish
+}
+
+.btn--warning {
+    @include btn--design;
+    background-color: $warning-btn-clr; //orangish
+}
+
+.btn--info {
+    @include btn--design;
+    background-color: $info-btn-clr; // purplish
+}
+
+// .theme__colors {}

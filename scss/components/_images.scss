@@ -1,0 +1,18 @@
+// ..components/_images.scss
+
+.img--frame {
+    border: 1px solid $body-txt-color;
+    padding: 10px;
+    margin: auto;
+}
+
+.img--avatar {
+    display: flex;
+    margin: auto;
+    margin-bottom: 16px;
+}
+
+.img--logo {
+    display: block;
+    margin: auto;
+}

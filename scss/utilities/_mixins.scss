@@ -1,0 +1,28 @@
+// utilities/mixins.scss
+
+@mixin btn--design {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: $menu-txt-color;
+    text-transform: uppercase;
+    justify-content: center;
+    margin: 24px auto;
+}
+
+@mixin grid-col-design {
+    display: flex;
+    color: $body-txt-color;
+    padding-left: 10px;
+    height: 42px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-top: 8px;
+}
+
+// Media Queries
+
+// Flexbox settings

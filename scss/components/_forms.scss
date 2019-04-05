@@ -1,0 +1,17 @@
+// /components/forms.scss
+
+// .form {}
+
+.form__label--hidden {
+    display: none;
+}
+
+.form__input {
+    width: 100%;
+    font-size: 16px;
+    border-top: none; 
+    border-right: none;
+    border-left: none;
+    border-bottom: $menu-color solid 5px;
+    margin-bottom: 36px;
+}

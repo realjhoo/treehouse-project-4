@@ -1,0 +1,25 @@
+// ../components/navigation.scss
+
+.nav {
+    padding-left: 1em;
+    font-size: 14px;
+    width: 95%;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+.nav__item {
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 10px;
+    &:hover {
+        background-color: $menu-color;
+        border-radius: 5px;
+    }
+}
+
+.nav__item:hover > a {
+    display: block;
+    color: $menu-txt-color;
+}

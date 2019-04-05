@@ -1,0 +1,15 @@
+// ../base/_base.scss
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $body-txt-color;
+    font-family: $font-sans;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+// Only allowed
+// ul
+// p
+// a

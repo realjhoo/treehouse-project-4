@@ -1,0 +1,30 @@
+// ../utilities/variables.scss
+
+// FONTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$font-sans: "Open Sans", sans-serif;
+
+// BREAKPOINTS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$mobile-breakpoint: 480px;
+$desktop-breakpoint: 1400px;
+
+// COLORS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+$menu-color:     #4ddeb4;
+$menu-txt-color: #ffffff;
+$body-txt-color: #888888;
+$link-color:     #47d8fc;
+
+// =-=-=-=-=-=-= BUTTON COLORS =-=-=-=-=-=-=-=-=
+$default-btn-clr: #47d8fc; //bluish
+$success-btn-clr: #58c577; //greenish
+$error-btn-clr:   #e0696f; //redish
+$warning-btn-clr: #fd6c4c; //orangish
+$info-btn-clr:    #8770b9; // purplish
+
+// =-=-=-=-=-=-=-= GRID COLORS =-=-=-=-=-=-=-=-=
+$grid-col-3-clr:  #deb2ee;
+$grid-col-4-clr:  #7ee6fd;
+$grid-col-5-clr:  #88d9a0;
+$grid-col-6-clr:  #3fabca;
+$grid-col-7-clr:  #ec9fa3;
+$grid-col-8-clr:  #fd9f85;
+$grid-col-12-clr: #80e8d1;
