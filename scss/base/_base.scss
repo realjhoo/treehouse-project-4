@@ -5,11 +5,19 @@
     text-decoration: none;
     color: $body-txt-color;
     font-family: $font-sans;
-    margin-left: 8px;
-    margin-right: 8px;
+    //margin-left: 10px;
+   // margin-right: 10px;
 }
+
 
 // Only allowed
 // ul
+ul {
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 24px;
+    padding-bottom: 20px;
+    margin-right: 0px;
+}
 // p
 // a

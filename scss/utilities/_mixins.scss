@@ -3,26 +3,81 @@
 @mixin btn--design {
     display: flex;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     height: 42px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
     color: $menu-txt-color;
     text-transform: uppercase;
     justify-content: center;
-    margin: 24px auto;
 }
 
 @mixin grid-col-design {
     display: flex;
     color: $body-txt-color;
     padding-left: 10px;
-    height: 42px;
+    height: 40px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px;
     padding-top: 8px;
+    margin-top: 6px;
+    font-weight:bold;
 }
 
-// Media Queries
+// Media Queries =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-// Flexbox settings
+
+@mixin big-screen-menu {
+    display: $flex-disp;
+    flex-direction: $flex-dir;
+    // margin-left: 200px;
+}
+
+@media (min-width: 768) {
+
+    .grid__col--12 > .btn--default {
+        width: 160px;
+        margin-left: 25px;
+    }
+
+
+    .grid__col--12 > .btn--success {
+        width: 160px;
+    }
+
+    .grid__col--12 > .btn--error {
+        width: 160px;
+    }
+
+    .grid__col--12 > .btn--warning {
+        width: 160px;
+    }
+
+    .grid__col--12 > .btn--info {
+        width: 160px;
+        margin-right: 25px;
+    }
+}
+
+
+// Flexbox settings =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@mixin flex-it {
+    display: $flex-disp;
+    flex-flow: $flex-dir, $flex-wrap;
+    justify-content: $flex-justify;
+    //margin-left: auto;
+    //margin-right: 50px;
+    //width: 75%;
+}
+
+@mixin buttons-fixit {
+    width: 180px;
+}
+
+@mixin submit-fixit {
+    width: 100%;
+}

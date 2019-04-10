@@ -2,14 +2,17 @@
 
 .img--frame {
     border: 1px solid $body-txt-color;
-    padding: 10px;
-    margin: auto;
+    padding: 12px;
+    margin-left: auto;
+    margin-bottom: 16px;
+    // 432 x 222
+    height: 200px;
+    width:  400px;
 }
 
 .img--avatar {
     display: flex;
     margin: auto;
-    margin-bottom: 16px;
 }
 
 .img--logo {

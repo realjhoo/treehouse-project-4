@@ -35,6 +35,8 @@
     // NOTE: replace with media query mixin if aiming for exceeds
     @media (min-width: 768px) {
       flex-direction: row;
+      margin-left: 10%;
+      margin-right: 10%;
     }
   }
 
@@ -49,7 +51,7 @@
       // selector would be .grid__col--1
       &--#{$i} {
 
-        // base styles applied to all grid columns 
+        // base styles applied to all grid columns
         // NOTE: could be converted to a placeholder, along with margin
         // from the  media query
         margin-top: 10px;
@@ -82,38 +84,45 @@
     }
   }
 }
+@media (min-width: $desktop-breakpoint) {
+  .centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-.grid__col--12.theme__colors{
+// this should be a loop, but there are no points for a loop.
+.grid__col--12.theme__colors {
   @include grid-col-design;
   background-color: $grid-col-12-clr;
 }
 
-.grid__col--6.theme__colors{
+.grid__col--6.theme__colors {
     @include grid-col-design;
   background-color: $grid-col-6-clr;
 }
 
-.grid__col--4.theme__colors{
+.grid__col--4.theme__colors {
     @include grid-col-design;
     background-color: $grid-col-4-clr;
 }
 
-.grid__col--3.theme__colors{
+.grid__col--3.theme__colors {
     @include grid-col-design;
   background-color: $grid-col-3-clr;
 }
 
-.grid__col--5.theme__colors{
+.grid__col--5.theme__colors {
     @include grid-col-design;
   background-color: $grid-col-5-clr;
 }
 
-.grid__col--7.theme__colors{
+.grid__col--7.theme__colors {
     @include grid-col-design;
   background-color: $grid-col-7-clr;
 }
 
-.grid__col--8.theme__colors{
+.grid__col--8.theme__colors {
     @include grid-col-design;
   background-color: $grid-col-8-clr;
 }

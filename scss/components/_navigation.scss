@@ -1,11 +1,11 @@
 // ../components/navigation.scss
 
 .nav {
-    padding-left: 1em;
-    font-size: 14px;
-    width: 95%;
+    width: 100%;
     text-align: center;
-    font-size: 18px;
+    @media (min-width: $desktop-breakpoint) {
+        @include big-screen-menu;
+    }
 }
 
 
