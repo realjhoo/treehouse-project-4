@@ -5,3 +5,29 @@
 // IMAGES  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 // NAV ITEMS =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+// =-=-=-=-= These placeholders pass color values to the grid button style =-=
+// =-=-=-=-= because interpolation cant be used on variables               =-=
+%grid-clr-3 {
+    background-color: $grid-col-3-clr;
+}
+
+%grid-clr-4 {
+    background-color: $grid-col-4-clr;
+}
+
+%grid-clr-5 {
+    background-color: $grid-col-5-clr;
+}
+
+%grid-clr-6 {
+    background-color: $grid-col-6-clr;
+}
+
+%grid-clr-7 {
+    background-color: $grid-col-7-clr;
+}
+
+%grid-clr-8 {
+    background-color: $grid-col-8-clr;
+}

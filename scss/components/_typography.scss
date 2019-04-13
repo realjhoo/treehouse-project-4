@@ -3,17 +3,42 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600, 700');
 
 .container {
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.6em;
 }
 
-.card > .headline--secondary {
-    margin-left: 0;
-    margin-top: 0;
+.headline--primary {
+    color: $menu-color;
+    padding-left: .8em;
+    padding-right: 2em;
+    line-height: 1.2em;
+    font-size: 1.8em;
+    font-style: 700;
 }
 
+// "typography"
+.card > .headline--secondary {
+    margin-left: .5em;
+    margin-top: 3em;
+    font-weight: 300;
+}
+
+// "form elements"
 .form > .headline--secondary {
     margin-left: 0;
+    margin-top: 3em;
+    font-weight: 300;
+}
+
+// "images", "buttons", and "grid system"
+body > .headline--secondary {
+    margin-top: 3em;
+    margin-bottom: 2em;
+    margin-left: 1.2em;
+    font-weight: 300;
+    @include mq("desktop") {
+        margin-left: 9.5em;
+    }
 }
 
 .link {
@@ -23,28 +48,15 @@
 }
 
 .blockquote {
-    font-size: 24px;
+    font-size: 1.5em;
     font-style: italic;
     font-weight: 100;
-    line-height: 1.2em;
+    line-height: 1.3em;
     border-left: 8px solid $menu-color;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    margin-left: 24px;
-    padding-left: 24px;
-    margin-right: 24px;
-}
-
-.headline--primary {
-    color: $menu-color;
-    padding-left: 24px;
-    padding-right: 24px;
-    line-height: 1.2em;
-    font-size: 26px;
-    font-style: 700;
-}
-
-.headline--secondary {
-    font-weight: 300;
-    margin-left: 120px;
+    margin-top: 1.3em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    padding-left: 1.5em;
 }

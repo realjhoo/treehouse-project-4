@@ -22,3 +22,9 @@
     font-weight: 600;
     text-indent: 10px;
 }
+
+.form > .btn--default {
+    @include btn--design;
+    background-color: $default-btn-clr;
+    margin: 1em 0;
+}

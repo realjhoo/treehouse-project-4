@@ -1,50 +1,53 @@
 // components/buttons.scss
 
-
 .grid__col--12 {
-    @media (min-width: $desktop-breakpoint) {
-        @include flex-it;
-    }
+   @include mq("desktop") {
+      @include flex-it;
+   }
 }
 
+// styling the buttons
 .btn--default {
-    @include btn--design;
-    background-color: $default-btn-clr;
-    margin: 15px 0;
+   @include btn--design;
+   background-color: $default-btn-clr;
+   //shorthand is T R B L
+   @include mq("desktop") {
+      margin: 1.8em 0 0 1.25em;
+   }
 }
 
 .btn--success {
-    @include btn--design;
-    background-color: $success-btn-clr; //greenish
-    margin: 15px 0;
+   @include btn--design;
+   background-color: $success-btn-clr; //greenish
+   margin: 1.8em 0;
 }
 
 .btn--error {
-    @include btn--design;
-    background-color: $error-btn-clr; //redish
-    margin: 15px 0;
+   @include btn--design;
+   background-color: $error-btn-clr; //redish
+   margin: 1.8em 0;
 }
 
 .btn--warning {
-    @include btn--design;
-    background-color: $warning-btn-clr; //orangish
-    margin: 15px 0;
+   @include btn--design;
+   background-color: $warning-btn-clr; //orangish
+   margin: 1.8em 0;
 }
 
 .btn--info {
-    @include btn--design;
-    background-color: $info-btn-clr; // purplish
-    margin: 15px 0;
+   @include btn--design;
+   background-color: $info-btn-clr; // purplish
+   margin: 1.8em 1.25em 0 0;
 }
 
 .theme__colors {
-    @media (min-width: $desktop-breakpoint) {
-        @include buttons-fixit;
-    }
+   @include mq("desktop") {
+      @include buttons-fixit;
+   }
 }
 
 form .btn--default {
-    @media (min-width: $desktop-breakpoint) {
-        @include submit-fixit;
-    }
+   @include mq("desktop") {
+      @include submit-fixit;
+   }
 }

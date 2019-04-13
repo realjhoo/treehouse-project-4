@@ -1,13 +1,14 @@
 // ../components/navigation.scss
 
 .nav {
-    width: 100%;
+    margin-top: 2em;
+    padding-left: 0;
     text-align: center;
-    @media (min-width: $desktop-breakpoint) {
+    margin-bottom: 5em;
+    @include mq("desktop") {
         @include big-screen-menu;
     }
 }
-
 
 .nav__item {
     list-style: none;

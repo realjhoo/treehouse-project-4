@@ -6,123 +6,109 @@
 // but additional styling may be needed
 // **********************************************
 
-    // Grid:
-    // .container
-    // .grid__row
-    // .grid__col--2
-    // .grid__col--3
-    // .grid__col--4
-    // .grid__col--5
-    // .grid__col--6
-    // .grid__col--7
-    // .grid__col--8
-    // .grid__col--9
-    // .grid__col--10
-    // .grid__col--11
-    // .grid__col--12
-    // .centered
-    // .theme__colors
+// Grid:
+// .container
+// .grid__row
+// .grid__col--2
+// .grid__col--3
+// .grid__col--4
+// .grid__col--5
+// .grid__col--6
+// .grid__col--7
+// .grid__col--8
+// .grid__col--9
+// .grid__col--10
+// .grid__col--11
+// .grid__col--12
+// .centered
+// .theme__colors
 
 // grid base class
 .grid {
+   // .grid__row
+   &__row {
+      padding: 1em 10px;
+      display: flex;
+      flex-direction: column;
 
-  // .grid__row
-  &__row {
-    padding: 1em 10px;
-    display: flex;
-    flex-direction: column;
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-      flex-direction: row;
-      margin-left: 10%;
-      margin-right: 10%;
-    }
-  }
-
-  // .grid__col
-  &__col {
-
-    // create grid columns dynamically
-    // loop through each column size
-    @for $i from 1 through 12 {
-
-      // concatenate CSS selector, ie when $i = 1,
-      // selector would be .grid__col--1
-      &--#{$i} {
-
-        // base styles applied to all grid columns
-        // NOTE: could be converted to a placeholder, along with margin
-        // from the  media query
-        margin-top: 10px;
-        flex-basis: 100%;
-
-        // NOTE: replace with media query mixin if aiming for exceeds
-        @media (min-width: 768px) {
-
-          // base stlyes applied to all grid columns
-          margin-top: 0;
-
-          // make column width a percentage of the column number / total columns
-          flex-basis: #{$i / 12 * 100 + "%"} ;
-        }
+      // NOTE: replace with media query mixin if aiming for exceeds
+      // =-=-=-=-= REPLACED WITH mixin =-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+      @include mq("desktop") {
+         flex-direction: row;
+         margin-left: 10%;
+         margin-right: 10%;
       }
-    }
-  }
+   }
+
+   // .grid__col
+   &__col {
+      // create grid columns dynamically
+      // loop through each column size
+      @for $i from 1 through 12 {
+         // concatenate CSS selector, ie when $i = 1,
+         // selector would be .grid__col--1
+         &--#{$i} {
+            // base styles applied to all grid columns
+            // NOTE: could be converted to a placeholder, along with margin
+            // from the  media query
+            margin-top: 10px;
+            flex-basis: 100%;
+
+            // NOTE: replace with media query mixin if aiming for exceeds
+            // =-=-=-=-= REPLACED WITH mixin =-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+            @include mq("desktop") {
+               margin-top: 0; // base stlyes applied to all grid columns
+               // make column width a percentage of the column number / total columns
+               flex-basis: #{$i / 12 * 100 + "%"};
+            }
+         }
+      }
+   }
 }
 
 // targets all elements with classes that begin with grid__col
-[class^=grid__col] {
-  // grid__col + grid__col, targets two sibling columns
-  & + & {
-
-    // NOTE: replace with media query mixin if aiming for exceeds
-    @media (min-width: 768px) {
-
-      // add grid gutter
-      margin-left: 10px;
-    }
-  }
-}
-@media (min-width: $desktop-breakpoint) {
-  .centered {
-    margin-left: auto;
-    margin-right: auto;
-  }
+[class^="grid__col"] {
+   // grid__col + grid__col, targets two sibling columns
+   & + & {
+      // NOTE: replace with media query mixin if aiming for exceeds
+      // =-=-=-=-= REPLACED WITH mixin =-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=
+      @include mq("desktop") {
+         margin-left: 10px; // grid gutter
+      }
+   }
 }
 
-// this should be a loop, but there are no points for a loop.
+@include mq("desktop") {
+   .centered {
+      margin: 0 auto 6em;
+   }
+}
+
+// this loop styles the grid buttons
+// placeholder workaround for variable interpolation problem
+.grid__col {
+   @for $i from 3 through 8 {
+      &--#{$i}.theme__colors {
+         @include grid-col-design;
+         @extend %grid-clr-#{$i};
+         @include mq("desktop") {
+            @include grid-col-design-big;
+            justify-content: center;
+         }
+      }
+   } // @ for
+} // .grid
+
 .grid__col--12.theme__colors {
-  @include grid-col-design;
-  background-color: $grid-col-12-clr;
+   @include grid-col-design;
+   background-color: $grid-col-12-clr;
+   @include mq("desktop") {
+      justify-content: center;
+      height: 3.3em;
+      padding-top: 0.7em;
+      font-size: 0.9em;
+      font-weight: bold;
+   }
 }
 
-.grid__col--6.theme__colors {
-    @include grid-col-design;
-  background-color: $grid-col-6-clr;
-}
-
-.grid__col--4.theme__colors {
-    @include grid-col-design;
-    background-color: $grid-col-4-clr;
-}
-
-.grid__col--3.theme__colors {
-    @include grid-col-design;
-  background-color: $grid-col-3-clr;
-}
-
-.grid__col--5.theme__colors {
-    @include grid-col-design;
-  background-color: $grid-col-5-clr;
-}
-
-.grid__col--7.theme__colors {
-    @include grid-col-design;
-  background-color: $grid-col-7-clr;
-}
-
-.grid__col--8.theme__colors {
-    @include grid-col-design;
-  background-color: $grid-col-8-clr;
-}
+// justify-content: center;
