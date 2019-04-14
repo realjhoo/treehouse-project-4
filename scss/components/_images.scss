@@ -1,27 +1,33 @@
 // ..components/_images.scss
 
 .img--frame {
-   display: flex;
-   justify-content: center;
-   // original size 432 x 222
-   height: 200px;
-   width: 400px;
-   padding: 0.8em;
-   border: 1px solid $body-txt-color;
-   margin-left: auto;
-   margin-right: auto;
+    display: flex;
+    justify-content: center;
+    // prevent the image from getting larger
+    max-height: 222px;
+    max-width: 432px;
+    // but allow it to get smaller and stay in aspect ratio
+    width: 100%;
+    height: auto;
 
-   @include mq("desktop") {
-      margin-left: 3em;
-   }
+    padding: 0.8em;
+    border: 1px solid $body-txt-color;
+
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+
+    @include mq("desktop") {
+        margin-left: 3em;
+    }
 }
 
 .img--avatar {
-   display: flex;
-   margin: auto;
+    display: flex;
+    margin: auto;
 }
 
 .img--logo {
-   display: block;
-   margin: auto;
+    display: block;
+    margin: auto;
 }

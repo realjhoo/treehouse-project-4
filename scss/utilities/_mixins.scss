@@ -1,88 +1,73 @@
 // utilities/mixins.scss
 
+// =-=-=-=-=-=-= Styling Mixins =-=-=-=-=-=-=-=-=
 @mixin btn--design {
-   display: flex;
-   height: 42px;
-   width: 100%;
-   margin-right: auto;
-   margin-left: auto;
-   border: none;
-   border-radius: 5px;
-   font-size: 15px;
-   font-weight: bold;
-   color: $menu-txt-color;
-   text-transform: uppercase;
-   justify-content: center;
+    display: flex;
+    height: 42px;
+    width: 100%;
+    margin-top: 1.8em;
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: $menu-txt-color;
+    text-transform: uppercase;
+    justify-content: center;
 }
 
 @mixin grid-col-design {
-   display: flex;
-   color: $body-txt-color;
-   height: 3.5em;
-   font-size: 0.8em;
-   font-weight: bold;
-   padding-top: 8px;
-   padding-left: 10px;
-
-   border-radius: 5px;
-   margin-top: 6px;
+    display: flex;
+    color: $body-txt-color;
+    height: 3.5em;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 10px;
+    border-radius: 5px;
+    margin-top: 6px;
 }
 
 @mixin grid-col-design-big {
-   display: flex;
-   color: $body-txt-color;
-   height: 3em;
-   font-size: 0.9em;
-   font-weight: bold;
-   padding-top: 0.7em;
-   border-radius: 5px;
-   margin-top: 1.2em;
+    height: 3em;
+    font-size: 0.9em;
+    padding-top: 0.7em;
+    margin-top: 1.2em;
 }
-
-// Media Queries =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 @mixin big-screen-menu {
-   display: $flex-disp;
-   flex-direction: $flex-dir;
-   margin-left: 7em;
-}
-
-//
-$btn-types: ("default", "success", "error", "warning", "info");
-
-@media (min-width: 768) {
-   @each $btn-type in $btn-types {
-      .grid__col--12 > .btn--#{$btn-type} {
-         width: 160px;
-      }
-   }
-}
-
-// =-=-=-=-=-= REAL MEDIA QUERY =-=-=-=-=-=-=
-@mixin mq($break) {
-   @if $break == "mobile" {
-      @media (min-width: $mobile-breakpoint) {
-         @content;
-      }
-   } @else if $break == "desktop" {
-      @media (min-width: $desktop-breakpoint) {
-         @content;
-      }
-   }
-}
-
-// Flexbox settings =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
-@mixin flex-it {
-   display: flex;
-   flex-flow: $flex-dir, $flex-wrap;
-   justify-content: $flex-justify;
+    display: $flex-disp;
+    flex-direction: $flex-dir;
+    margin-left: 7em;
 }
 
 @mixin buttons-fixit {
-   width: 180px;
+    width: 180px;
 }
 
 @mixin submit-fixit {
-   width: 100%;
+    width: 80%;
+}
+
+// MEDIA QUERIES  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@mixin mq($break) {
+    @if $break == "mobile" {
+        @media (min-width: $mobile-breakpoint) {
+            @content;
+        }
+    } @else if $break == "desktop" {
+        @media (min-width: $desktop-breakpoint) {
+            @content;
+        }
+    }
+}
+
+// FLEXBOX SETTINGS MIXIN  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+@mixin flex-it {
+    display: flex;
+    flex-flow: $flex-dir, $flex-wrap;
+    justify-content: $flex-justify;
 }

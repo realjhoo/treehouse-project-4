@@ -1,41 +1,42 @@
 // ../components/typography.scss
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600, 700');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600, 700");
 
 .container {
+    font-family: $font-sans;
     font-size: 1em;
     line-height: 1.6em;
+    color: $body-txt-color;
+    margin: 0 0em;
 }
 
 .headline--primary {
     color: $menu-color;
-    padding-left: .8em;
-    padding-right: 2em;
-    line-height: 1.2em;
     font-size: 1.8em;
     font-style: 700;
+    line-height: 1.2em;
+    padding-right: 2em;
+    padding-left: 0.8em;
 }
 
-// "typography"
 .card > .headline--secondary {
-    margin-left: .5em;
-    margin-top: 3em;
     font-weight: 300;
+    margin-top: 3em;
+    margin-left: 0.5em;
 }
 
-// "form elements"
 .form > .headline--secondary {
-    margin-left: 0;
-    margin-top: 3em;
     font-weight: 300;
+    margin-top: 3em;
+    margin-left: 0;
 }
 
-// "images", "buttons", and "grid system"
 body > .headline--secondary {
+    font-weight: 300;
     margin-top: 3em;
     margin-bottom: 2em;
     margin-left: 1.2em;
-    font-weight: 300;
+
     @include mq("desktop") {
         margin-left: 9.5em;
     }
@@ -52,11 +53,11 @@ body > .headline--secondary {
     font-style: italic;
     font-weight: 100;
     line-height: 1.3em;
+    padding-left: 1.5em;
     border-left: 8px solid $menu-color;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     margin-top: 1.3em;
-    margin-left: 1.5em;
     margin-right: 1.5em;
-    padding-left: 1.5em;
+    margin-left: 1.5em;
 }

@@ -1,21 +1,26 @@
 // /components/forms.scss
 
-// .form {}
-
+.form {
+    margin-left: 25px;
+}
 .form__label--hidden {
     display: none;
 }
 
 .form__input {
-    width: 95%;
+    width: 85%;
     font-size: 14px;
+    padding-bottom: 12px;
     border: none;
     border-bottom: $menu-color solid 5px;
-    margin-left: 10px;
-    margin-right: auto;
-    margin-bottom: 18px;
-    margin-top: 18px;
-    padding-bottom: 12px;
+    margin-top: 38px;
+    margin-left: 2.5em;
+
+    @include mq("desktop") {
+        width: 90%;
+        margin-top: 1em;
+        margin-left: 12px;
+    }
 }
 
 .form__input::placeholder {
@@ -25,6 +30,9 @@
 
 .form > .btn--default {
     @include btn--design;
+    width: 95%;
     background-color: $default-btn-clr;
-    margin: 1em 0;
+    @include mq("desktop") {
+        width: 100%;
+    }
 }

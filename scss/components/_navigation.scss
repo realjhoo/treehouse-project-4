@@ -1,9 +1,9 @@
 // ../components/navigation.scss
 
 .nav {
-    margin-top: 2em;
-    padding-left: 0;
     text-align: center;
+    padding-left: 0;
+    margin-top: 2em;
     margin-bottom: 5em;
     @include mq("desktop") {
         @include big-screen-menu;
@@ -12,12 +12,16 @@
 
 .nav__item {
     list-style: none;
-    margin-bottom: 5px;
     padding: 10px;
+    margin-bottom: 5px;
     &:hover {
         background-color: $menu-color;
         border-radius: 5px;
     }
+}
+
+.nav__item > a {
+    color: $body-txt-color;
 }
 
 .nav__item:hover > a {

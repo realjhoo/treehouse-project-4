@@ -1,53 +1,51 @@
 // components/buttons.scss
 
+// =-=-=-=-=-=-=-= STYLE the BUTTONS =-=-=-=-=-=-=-=-=-=-=-=-=
+$btn-types: ("default", "success", "error", "warning", "info");
+
+@each $btn-type in $btn-types {
+    .grid__col--12 > .btn--#{$btn-type} {
+        @include btn--design;
+        @include mq("desktop") {
+            width: 16%;
+        }
+    }
+}
+
+// =-=-=-=-=-= SET the BUTTON COLORS =-=-=-=-=-=-=-=-=-=-=-=-=
+.btn-- {
+    &default {
+        background-color: $default-btn-clr;
+    }
+    &success {
+        background-color: $success-btn-clr; //greenish
+    }
+    &error {
+        background-color: $error-btn-clr; //redish
+    }
+    &warning {
+        background-color: $warning-btn-clr; //orangish
+    }
+    &info {
+        background-color: $info-btn-clr; // purplish
+    }
+}
+
+// =-=-=-=-=-=-=-=-= Fix Minor Anomalies =-=-=-=-=-=-=
 .grid__col--12 {
-   @include mq("desktop") {
-      @include flex-it;
-   }
-}
-
-// styling the buttons
-.btn--default {
-   @include btn--design;
-   background-color: $default-btn-clr;
-   //shorthand is T R B L
-   @include mq("desktop") {
-      margin: 1.8em 0 0 1.25em;
-   }
-}
-
-.btn--success {
-   @include btn--design;
-   background-color: $success-btn-clr; //greenish
-   margin: 1.8em 0;
-}
-
-.btn--error {
-   @include btn--design;
-   background-color: $error-btn-clr; //redish
-   margin: 1.8em 0;
-}
-
-.btn--warning {
-   @include btn--design;
-   background-color: $warning-btn-clr; //orangish
-   margin: 1.8em 0;
-}
-
-.btn--info {
-   @include btn--design;
-   background-color: $info-btn-clr; // purplish
-   margin: 1.8em 1.25em 0 0;
+    @include mq("desktop") {
+        @include flex-it; // =-=-= call the flexbox mixin =-=-=
+    }
 }
 
 .theme__colors {
-   @include mq("desktop") {
-      @include buttons-fixit;
-   }
+    @include mq("desktop") {
+        @include buttons-fixit;
+    }
 }
 
-form .btn--default {
-   @include mq("desktop") {
-      @include submit-fixit;
-   }
+.form > .btn--default {
+    @include mq("desktop") {
+        @include submit-fixit;
+    }
 }
